@@ -1,0 +1,40 @@
+{
+  "name": "PANTSLAND-TSKLST",
+  "version": "1.0.0",
+  "description": "Task List App with User Authentication System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lowisren/tasklist.git"
+  },
+  "author": "Lauren Etheridge",
+  "email": "lauren@laurenbetheridge.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lowisren/tasklist/issues"
+  },
+  "homepage": "https://github.com/lowisren/tasklist#readme",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "git": "^0.1.5",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
