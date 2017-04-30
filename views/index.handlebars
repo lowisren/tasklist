@@ -1,2 +1,17 @@
- <h2 class="page-header">Dashboard</h2>
-<p>Welcome to your dashboard</p>  
+ <h2 class="page-header">TSK LIST</h2>
+<p>Welcome to your To-Do List</p>
+
+<div class="card">
+<div class="card-block">
+<div="tasks list-group">
+    <p class="task list-group-item">{{tasks.task}}</p>
+  </div>
+</div>
+</div>
+
+<div class="form-group"> 
+<form action="/tasks" method="post">
+    <input type="text" class="form-control" placeholder="enter task" name="task">
+    <button class="btn btn-default" type="submit">Submit</button>
+</form>
+</div>

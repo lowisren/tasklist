@@ -10,18 +10,27 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/tasklist');
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+
+
 // Init App
 var app = express();
 
-// View Engine
+// Start View Engine 
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({defaultLayout:'layout'}));
+app.engine('handlebars', exphbs({  defaultLayout: 'layout', 
+  helpers: {
+    toJSON : function(object) {
+      return JSON.stringify(object);
+    }
+  }
+}));
 app.set('view engine', 'handlebars');
 
 // BodyParser Middleware
@@ -69,11 +78,14 @@ app.use(function (req, res, next) {
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
   res.locals.user = req.user || null;
+  app.locals.tasks = require('express-handlebars');
   next();
 });
 
 app.use('/', routes);
 app.use('/users', users);
+
+
 
 // Set Port
 app.set('port', (process.env.PORT || 3000));
