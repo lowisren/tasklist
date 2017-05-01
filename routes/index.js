@@ -141,11 +141,11 @@ router.post('/tasks', function (req, res){
     function(err, document) {
     if(err) 
     {
-      return console.log(err)
+      return console.log(err);
     }
     else
     {
-      console.log('saved to database')
+      console.log(req.body.task + " is saved to the list");
     }
     res.redirect('/tasks');
   });
