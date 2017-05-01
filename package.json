@@ -1,7 +1,7 @@
 {
   "name": "PANTSLAND-TSKLST",
   "version": "1.0.0",
-  "description": "Task List App with User Authentication System",
+  "description": "Tasklist-API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

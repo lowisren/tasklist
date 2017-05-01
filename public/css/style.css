@@ -8,6 +8,10 @@
     font-family: Raleway;
     src: url(../fonts/Raleway-Regular.ttf);
 }
+
+body {
+     background-color: rgba(121,140,128,0.50);
+}
 .navbar-brand h5, img {
   display: inline;
   vertical-align: middle;
@@ -279,7 +283,7 @@ label {
   margin-top: 10px;
   margin-left: 18px;
 }
-#btnLogin {
+#btnLogin, #btnTask {
   background-color: #17120C;
   color: #E7DDC7;
   margin-top: 10px;

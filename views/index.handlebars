@@ -1,17 +1,8 @@
- <h2 class="page-header">TSK LIST</h2>
-<p>Welcome to your To-Do List</p>
-
-<div class="card">
-<div class="card-block">
-<div="tasks list-group">
-    <p class="task list-group-item">{{tasks.task}}</p>
-  </div>
-</div>
-</div>
-
+ <h2 class="page-header text-center">TSK LIST</h2>
+<h3 class="text-muted">Welcome to your To-Do List</h3>
 <div class="form-group"> 
 <form action="/tasks" method="post">
     <input type="text" class="form-control" placeholder="enter task" name="task">
-    <button class="btn btn-default" type="submit">Submit</button>
+    <button id="btnTask"class="btn btn-default" type="submit">Submit</button>
 </form>
 </div>
